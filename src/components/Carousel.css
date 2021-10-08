@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+h1,h3{
+  font-family: 'Italianno', cursive;
+
+}
+.carousel-item active img{
+    height: 500;
+    width: 1200;
+}

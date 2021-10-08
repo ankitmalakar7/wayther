@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {  } from "./Carousel.css";
 
 export default class CarouselItems extends Component {
   render() {
@@ -53,7 +54,7 @@ export default class CarouselItems extends Component {
               <div className="container">
                 <div className="carousel-caption text-start">
                   <h1>{City}</h1>
-                  <p>{Country} {date}</p>
+                  <h3>{Country} {date}</h3>
                 </div>
               </div>
             </div>
@@ -68,9 +69,9 @@ export default class CarouselItems extends Component {
               <div className="container">
                 <div className="carousel-caption text-end">
                   <h1>Temperature {temp}°c</h1>
-                  <p>
+                  <h3>
                     max {temp_max}°c min {temp_min}°c feels-like {feels_like}°c
-                  </p>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -85,9 +86,9 @@ export default class CarouselItems extends Component {
               <div className="container">
                 <div className="carousel-caption text-start">
                   <h1>{Main}</h1>
-                  <p>
+                  <h3>
                     humidity {Humidity}% wind {Math.round(3.6 * WS)} km/h
-                  </p>
+                  </h3>
                 </div>
               </div>
             </div>

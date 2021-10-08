@@ -1,7 +1,27 @@
 body{
   background-color: rgb(33, 37, 41);
-  /* color: antiquewhite; */
 }
 input{
   border: 2px inset rgb(238, 114, 114);
+}
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+.navbar-brand {
+  font-family: 'Ephesis', cursive;
+  font-size: 30px;
+}
+.nav-link{
+  font-family: 'Ephesis', cursive;
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Italianno&family=Source+Sans+Pro:wght@300&display=swap');
+
+:placeholder-shown,button,input {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Italianno', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.thb{
+  color: aliceblue;
 }

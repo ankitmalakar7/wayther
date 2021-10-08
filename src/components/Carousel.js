@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CarouselItems from "./CarouselItems";
+// import Errorcode from "./Errorcode";
 
 const api = {
   key: "1c46d5bdf6853f2ce38f28a045c0d8f4",
@@ -42,13 +43,13 @@ export default function Carousel() {
             </div>
           </div>
         ) : (
-          "404 error"
+          ""
         )}
         <div className="search-box my-4 mx-4 d-flex justify-content-center">
           <input
             type="text"
             className="search"
-            placeholder="Current weather location"
+            placeholder="Current weather location..."
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />

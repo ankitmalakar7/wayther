@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Italianno&family=Source+Sans+Pro:wght@300&display=swap');
+
+p {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Italianno', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+}

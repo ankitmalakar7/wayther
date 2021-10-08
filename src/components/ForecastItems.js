@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {  } from "./Forecast.css";
 
 export default class ForecastItems extends Component {
   render() {
@@ -81,6 +82,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?nature"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
                   <div className="card-body">
                     <p className="card-text">
@@ -99,6 +102,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?sea"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
                   <div className="card-body">
                     <p className="card-text">
@@ -117,6 +122,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?cloud"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
 
                   <div className="card-body">
@@ -137,6 +144,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?sky"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
 
                   <div className="card-body">
@@ -156,6 +165,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?waterdrops"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
 
                   <div className="card-body">
@@ -175,6 +186,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?water"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
                   <div className="card-body">
                     <p className="card-text">
@@ -194,6 +207,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?snow"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
 
                   <div className="card-body">
@@ -213,6 +228,8 @@ export default class ForecastItems extends Component {
                     src="https://source.unsplash.com/265x225/?ocean"
                     className="bd-placeholder-img card-img-top"
                     alt=""
+                    height="100px"
+                    width="100px"
                   />
 
                   <div className="card-body">
