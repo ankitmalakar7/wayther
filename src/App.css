@@ -1,0 +1,7 @@
+body{
+  background-color: rgb(33, 37, 41);
+  /* color: antiquewhite; */
+}
+input{
+  border: 2px inset rgb(238, 114, 114);
+}
