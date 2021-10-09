@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "android-icon-32x32.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "32x32"
     },
     {
-      "src": "logo512.png",
+      "src": "apple-icon-60x60.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "60x60"
     }
   ],
   "start_url": ".",

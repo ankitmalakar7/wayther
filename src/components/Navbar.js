@@ -1,12 +1,16 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React,{useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
-export default class Navbar extends Component {
-  render() {
-    return (
+export default function Navbar(props) {
+  useEffect(() => {
+    props.set(100)
+  });
+  return (
+    <div>
+      
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" onClick={() => props.set(70)} to="/">
             wayther
           </Link>
           <button
@@ -17,23 +21,23 @@ export default class Navbar extends Component {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
+            >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link className="nav-link" aria-current="page" onClick={() => props.set(70)} to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/features">
+                <Link className="nav-link" onClick={() => props.set(70)} to="/features">
                   Features
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" onClick={() => props.set(70)} to="/contact">
                   Contact
                 </Link>
               </li>
@@ -41,6 +45,6 @@ export default class Navbar extends Component {
           </div>
         </div>
       </nav>
-    );
-  }
+    </div>
+  )
 }

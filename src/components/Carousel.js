@@ -1,37 +1,36 @@
 import React, { useState } from "react";
 import CarouselItems from "./CarouselItems";
-// import Errorcode from "./Errorcode";
+import Errorcode from "./Errorcode";
 
-const api = {
-  key: "1c46d5bdf6853f2ce38f28a045c0d8f4",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
-export default function Carousel() {
+export default function Carousel(props) {
+  const base = "https://api.openweathermap.org/data/2.5/";
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
   const search = (evt) => {
     if (true) {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      props.set(10);
+      fetch(`${base}weather?q=${query}&units=metric&appid=${props.apikey1}`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
           setQuery("");
-          console.log(result);
+          // console.log(result)
+          props.set(70);
         });
+      props.set(100);
     }
   };
   return (
     <>
       <main>
         {typeof weather.main != "undefined" ? (
-          console.log(weather.dt),
           <div className="cont">
             <div className="item">
               <CarouselItems
                 City={weather.name}
                 Country={weather.sys.country}
-                date={(new Date((weather.dt)*1000).toUTCString())}
+                date={new Date(weather.dt * 1000).toUTCString()}
                 temp={Math.round(weather.main.temp)}
                 feels_like={Math.round(weather.main.feels_like)}
                 temp_max={Math.round(weather.main.temp_max)}
@@ -43,7 +42,7 @@ export default function Carousel() {
             </div>
           </div>
         ) : (
-          ""
+          <Errorcode cod={weather.cod} />
         )}
         <div className="search-box my-4 mx-4 d-flex justify-content-center">
           <input

@@ -1,25 +1,24 @@
 import React, { useState } from "react";
-// import Errorcode from "./Errorcode";
+import Footer from "./Footer";
 import ForecastItems from "./ForecastItems";
 
-const api = {
-  key: "1151da0cfff2471e83bf13d23f59396c",
-  base: "https://api.weatherbit.io/v2.0/forecast/",
-  exclude: "hourly,minutely,alerts",
-};
-export default function Forecast() {
+export default function Forecast(props) {
+  const base = "https://api.weatherbit.io/v2.0/forecast/";
+  // const exclude= "hourly,minutely,alerts";
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
   const search = (evt) => {
     if (true) {
-      fetch(`${api.base}daily?city=${query}&key=${api.key}`)
+      props.set(10);
+      fetch(`${base}daily?city=${query}&key=${props.apikey2}`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
           setQuery("");
-          console.log(result);
+          props.set(70);
         });
+      props.set(100);
     }
   };
   return (
@@ -101,21 +100,24 @@ export default function Forecast() {
         ) : (
           ""
         )}
-        <div className="search-box my-4 mx-4 d-flex justify-content-center">
-          <input
-            type="text"
-            className="search"
-            placeholder="Forecast weather location..."
-            onChange={(e) => setQuery(e.target.value)}
-            value={query}
-          />
-          <button
-            type="submit"
-            onClick={search}
-            className="btn btn-primary mx-4"
-          >
-            Search
-          </button>
+        <div className="container">
+          <div className="search-box my-4 mx-4 d-flex justify-content-center">
+            <input
+              type="text"
+              className="search"
+              placeholder="Forecast weather location..."
+              onChange={(e) => setQuery(e.target.value)}
+              value={query}
+            />
+            <button
+              type="submit"
+              onClick={search}
+              className="btn btn-primary mx-4"
+            >
+              Search
+            </button>
+          </div>
+          <Footer />
         </div>
       </main>
     </>
