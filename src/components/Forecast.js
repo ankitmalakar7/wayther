@@ -4,6 +4,7 @@ import ForecastItems from "./ForecastItems";
 
 export default function Forecast(props) {
   const base = "https://api.weatherbit.io/v2.0/forecast/";
+  const key = "1151da0cfff2471e83bf13d23f59396c"
   // const exclude= "hourly,minutely,alerts";
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
@@ -11,7 +12,7 @@ export default function Forecast(props) {
   const search = (evt) => {
     if (true) {
       props.set(10);
-      fetch(`${base}daily?city=${query}&key=${props.apikey2}`)
+      fetch(`${base}daily?city=${query}&key=${key}`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
