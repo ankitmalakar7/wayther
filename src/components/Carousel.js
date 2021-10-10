@@ -4,14 +4,13 @@ import Errorcode from "./Errorcode";
 
 export default function Carousel(props) {
   const base = "https://api.openweathermap.org/data/2.5/";
-  const key= "1c46d5bdf6853f2ce38f28a045c0d8f4"
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
   const search = (evt) => {
     if (true) {
       props.set(10);
-      fetch(`${base}weather?q=${query}&units=metric&appid=${key}`)
+      fetch(`${base}weather?q=${query}&units=metric&appid=${props.apikey1}`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
